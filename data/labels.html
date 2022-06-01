@@ -1,0 +1,679 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Suggestions</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="aa34efd3-ab1f-49d1-a6fb-cfeeef63ccf6" class="page sans"><header><h1 class="page-title">Suggestions</h1></header><div class="page-body"><table class="collection-content"><thead><tr><th><span class="icon property-icon"><svg viewBox="0 0 14 14" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesTitle"><path d="M7.73943662,8.6971831 C7.77640845,8.7834507 7.81338028,8.8943662 7.81338028,9.00528169 C7.81338028,9.49823944 7.40669014,9.89260563 6.91373239,9.89260563 C6.53169014,9.89260563 6.19894366,9.64612676 6.08802817,9.30105634 L5.75528169,8.33978873 L2.05809859,8.33978873 L1.72535211,9.30105634 C1.61443662,9.64612676 1.2693662,9.89260563 0.887323944,9.89260563 C0.394366197,9.89260563 0,9.49823944 0,9.00528169 C0,8.8943662 0.0246478873,8.7834507 0.0616197183,8.6971831 L2.46478873,2.48591549 C2.68661972,1.90669014 3.24119718,1.5 3.90669014,1.5 C4.55985915,1.5 5.12676056,1.90669014 5.34859155,2.48591549 L7.73943662,8.6971831 Z M2.60035211,6.82394366 L5.21302817,6.82394366 L3.90669014,3.10211268 L2.60035211,6.82394366 Z M11.3996479,3.70598592 C12.7552817,3.70598592 14,4.24823944 14,5.96126761 L14,9.07922535 C14,9.52288732 13.6549296,9.89260563 13.2112676,9.89260563 C12.8169014,9.89260563 12.471831,9.59683099 12.4225352,9.19014085 C12.028169,9.6584507 11.3257042,9.95422535 10.5492958,9.95422535 C9.60035211,9.95422535 8.47887324,9.31338028 8.47887324,7.98239437 C8.47887324,6.58978873 9.60035211,6.08450704 10.5492958,6.08450704 C11.3380282,6.08450704 12.040493,6.33098592 12.4348592,6.81161972 L12.4348592,5.98591549 C12.4348592,5.38204225 11.9172535,4.98767606 11.1285211,4.98767606 C10.6602113,4.98767606 10.2411972,5.11091549 9.80985915,5.38204225 C9.72359155,5.43133803 9.61267606,5.46830986 9.50176056,5.46830986 C9.18133803,5.46830986 8.91021127,5.1971831 8.91021127,4.86443662 C8.91021127,4.64260563 9.0334507,4.44542254 9.19366197,4.34683099 C9.87147887,3.90316901 10.6232394,3.70598592 11.3996479,3.70598592 Z M11.1778169,8.8943662 C11.6830986,8.8943662 12.1760563,8.72183099 12.4348592,8.37676056 L12.4348592,7.63732394 C12.1760563,7.29225352 11.6830986,7.11971831 11.1778169,7.11971831 C10.5616197,7.11971831 10.056338,7.45246479 10.056338,8.0193662 C10.056338,8.57394366 10.5616197,8.8943662 11.1778169,8.8943662 Z M0.65625,11.125 L13.34375,11.125 C13.7061869,11.125 14,11.4188131 14,11.78125 C14,12.1436869 13.7061869,12.4375 13.34375,12.4375 L0.65625,12.4375 C0.293813133,12.4375 4.43857149e-17,12.1436869 0,11.78125 C-4.43857149e-17,11.4188131 0.293813133,11.125 0.65625,11.125 Z"></path></svg></span>Movie</th><th><span class="icon property-icon"><svg viewBox="0 0 14 14" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesMultipleSelect"><path d="M4,3 C4,2.447715 4.447715,2 5,2 L12,2 C12.5523,2 13,2.447716 13,3 C13,3.55228 12.5523,4 12,4 L5,4 C4.447715,4 4,3.55228 4,3 Z M4,7 C4,6.447715 4.447715,6 5,6 L12,6 C12.5523,6 13,6.447716 13,7 C13,7.55228 12.5523,8 12,8 L5,8 C4.447715,8 4,7.55228 4,7 Z M4,11 C4,10.447715 4.447715,10 5,10 L12,10 C12.5523,10 13,10.447716 13,11 C13,11.55228 12.5523,12 12,12 L5,12 C4.447715,12 4,11.55228 4,11 Z M2,4 C1.44771525,4 1,3.55228475 1,3 C1,2.44771525 1.44771525,2 2,2 C2.55228475,2 3,2.44771525 3,3 C3,3.55228475 2.55228475,4 2,4 Z M2,8 C1.44771525,8 1,7.55228475 1,7 C1,6.44771525 1.44771525,6 2,6 C2.55228475,6 3,6.44771525 3,7 C3,7.55228475 2.55228475,8 2,8 Z M2,12 C1.44771525,12 1,11.5522847 1,11 C1,10.4477153 1.44771525,10 2,10 C2.55228475,10 3,10.4477153 3,11 C3,11.5522847 2.55228475,12 2,12 Z"></path></svg></span>Level</th><th><span class="icon property-icon"><svg viewBox="0 0 14 14" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesCheckbox"><path d="M0,3 C0,1.34314 1.34326,0 3,0 L11,0 C12.6567,0 14,1.34314 14,3 L14,11 C14,12.6569 12.6567,14 11,14 L3,14 C1.34326,14 0,12.6569 0,11 L0,3 Z M3,1.5 C2.17139,1.5 1.5,2.17157 1.5,3 L1.5,11 C1.5,11.8284 2.17139,12.5 3,12.5 L11,12.5 C11.8286,12.5 12.5,11.8284 12.5,11 L12.5,3 C12.5,2.17157 11.8286,1.5 11,1.5 L3,1.5 Z M2.83252,6.8161 L3.39893,6.27399 L3.57617,6.10425 L3.92334,5.77216 L4.26904,6.10559 L4.44531,6.27582 L5.58398,7.37402 L9.28271,3.81073 L9.45996,3.64008 L9.80664,3.3056 L10.1538,3.63989 L10.3311,3.81067 L10.8936,4.35303 L11.0708,4.52399 L11.4434,4.88379 L11.0708,5.24353 L10.8936,5.41437 L6.1084,10.0291 L5.93115,10.2 L5.58398,10.5344 L5.23682,10.2 L5.05957,10.0292 L2.83057,7.87946 L2.65283,7.70801 L2.27832,7.34674 L2.6543,6.98694 L2.83252,6.8161 Z"></path></svg></span>Subtitles</th><th><span class="icon property-icon"><svg viewBox="0 0 14 14" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesMultipleSelect"><path d="M4,3 C4,2.447715 4.447715,2 5,2 L12,2 C12.5523,2 13,2.447716 13,3 C13,3.55228 12.5523,4 12,4 L5,4 C4.447715,4 4,3.55228 4,3 Z M4,7 C4,6.447715 4.447715,6 5,6 L12,6 C12.5523,6 13,6.447716 13,7 C13,7.55228 12.5523,8 12,8 L5,8 C4.447715,8 4,7.55228 4,7 Z M4,11 C4,10.447715 4.447715,10 5,10 L12,10 C12.5523,10 13,10.447716 13,11 C13,11.55228 12.5523,12 12,12 L5,12 C4.447715,12 4,11.55228 4,11 Z M2,4 C1.44771525,4 1,3.55228475 1,3 C1,2.44771525 1.44771525,2 2,2 C2.55228475,2 3,2.44771525 3,3 C3,3.55228475 2.55228475,4 2,4 Z M2,8 C1.44771525,8 1,7.55228475 1,7 C1,6.44771525 1.44771525,6 2,6 C2.55228475,6 3,6.44771525 3,7 C3,7.55228475 2.55228475,8 2,8 Z M2,12 C1.44771525,12 1,11.5522847 1,11 C1,10.4477153 1.44771525,10 2,10 C2.55228475,10 3,10.4477153 3,11 C3,11.5522847 2.55228475,12 2,12 Z"></path></svg></span>Kinopoisk </th></tr></thead><tbody><tr id="6e8b0b91-00c9-4ff1-8025-c40f686e0028"><td class="cell-title"><a href="https://www.notion.so/10-Cloverfield-Lane-6e8b0b9100c94ff18025c40f686e0028">10 Cloverfield Lane</a></td><td class="cell-VHOg"><span class="selected-value select-value-color-green">B1</span></td><td class="cell-]&lt;_A"><div class="checkbox checkbox-on"></div></td><td class="cell-pp@["></td></tr><tr id="c7c297e6-ca59-4292-8f83-d6584ec67d8b"><td class="cell-title"><a href="https://www.notion.so/10-things-I-hate-about-you-c7c297e6ca5942928f83d6584ec67d8b">10 things I hate about you</a></td><td class="cell-VHOg"><span class="selected-value select-value-color-green">B1</span></td><td class="cell-]&lt;_A"><div class="checkbox checkbox-on"></div></td><td class="cell-pp@["><span class="selected-value select-value-color-gray">No subs</span></td></tr><tr id="b77f9f6e-90a3-40bd-975b-b159dd32e483"><td class="cell-title"><a href="https://www.notion.so/A-knight-s-tale-b77f9f6e90a340bd975bb159dd32e483">A knight’s tale</a></td><td class="cell-VHOg"><span class="selected-value select-value-color-blue">B2</span></td><td class="cell-]&lt;_A"><div class="checkbox checkbox-on"></div></td><td class="cell-pp@["><span class="selected-value select-value-color-default">Everything</span></td></tr><tr id="1159a742-3bc6-4978-b575-2541939c838a"><td class="cell-title"><a href="https://www.notion.so/A-star-is-born-1159a7423bc64978b5752541939c838a">A star is born</a></td><td class="cell-VHOg"><span class="selected-value select-value-color-blue">B2</span></td><td class="cell-]&lt;_A"><div class="checkbox checkbox-on"></div></td><td class="cell-pp@["><span class="selected-value select-value-color-green">Nope</span></td></tr><tr id="302ea35b-8a7a-4202-857a-a6421d47cebd"><td class="cell-title"><a href="https://www.notion.so/Aladdin-302ea35b8a7a4202857aa6421d47cebd">Aladdin</a></td><td class="cell-VHOg"><span class="selected-value select-value-color-orange">A2/A2+</span></td><td class="cell-]&lt;_A"><div class="checkbox checkbox-on"></div></td><td class="cell-pp@["><span class="selected-value select-value-color-default">Everything</span></td></tr><tr id="b8fc41fd-0576-4df3-8e12-ea00df2ea2b0"><td class="cell-title"><a href="https://www.notion.so/All-dogs-go-to-heaven-b8fc41fd05764df38e12ea00df2ea2b0">All dogs go to heaven</a></td><td class="cell-VHOg"><span class="selected-value select-value-color-orange">A2/A2+</span></td><td class="cell-]&lt;_A"><div class="checkbox checkbox-on"></div></td><td class="cell-pp@["><span class="selected-value select-value-color-green">Nope</span></td></tr><tr id="ca9a1331-9aab-485e-bcde-b3aec377418d"><td class="cell-title"><a href="https://www.notion.so/An-American-tail-ca9a13319aab485ebcdeb3aec377418d">An  American tail</a></td><td class="cell-VHOg"><span class="selected-value select-value-color-orange">A2/A2+</span></td><td class="cell-]&lt;_A"><div class="checkbox checkbox-on"></div></td><td class="cell-pp@["><span class="selected-value select-value-color-green">Nope</span></td></tr><tr id="c9cc078d-084b-4089-af94-83c16df8b0ca"><td class="cell-title"><a href="https://www.notion.so/Babe-c9cc078d084b4089af9483c16df8b0ca">Babe</a></td><td class="cell-VHOg"><span class="selected-value select-value-color-orange">A2/A2+</span></td><td class="cell-]&lt;_A"><div class="checkbox checkbox-on"></div></td><td class="cell-pp@["><span class="selected-value select-value-color-green">Nope</span></td></tr><tr id="edc34967-efa4-411c-b40b-135bdc3160b0"><td class="cell-title"><a href="https://www.notion.so/Back-to-the-future-edc34967efa4411cb40b135bdc3160b0">Back to the future
+</a></td><td class="cell-VHOg"><span class="selected-value select-value-color-orange">A2/A2+</span></td><td class="cell-]&lt;_A"><div class="checkbox checkbox-on"></div></td><td class="cell-pp@["><span class="selected-value select-value-color-purple">Rus sub</span></td></tr><tr id="a825f10e-b29e-4ce8-ab26-21d31cdf2b94"><td class="cell-title"><a href="https://www.notion.so/Batman-begins-a825f10eb29e4ce8ab2621d31cdf2b94">Batman begins</a></td><td class="cell-VHOg"><span class="selected-value select-value-color-orange">A2/A2+</span></td><td class="cell-]&lt;_A"><div class="checkbox checkbox-on"></div></td><td class="cell-pp@["><span class="selected-value select-value-color-default">Everything</span></td></tr><tr id="8202bc6d-dd4c-4f53-916a-c1de881125c7"><td class="cell-title"><a href="https://www.notion.so/Beauty-and-the-beast-film-8202bc6ddd4c4f53916ac1de881125c7">Beauty and the beast (film)</a></td><td class="cell-VHOg"><span class="selected-value select-value-color-blue">B2</span></td><td class="cell-]&lt;_A"><div class="checkbox checkbox-on"></div></td><td class="cell-pp@["></td></tr><tr id="ad88e792-6970-45d0-9871-13ecd70d93d0"><td class="cell-title"><a href="https://www.notion.so/Before-I-go-to-sleep-ad88e792697045d0987113ecd70d93d0">Before I go to sleep</a></td><td class="cell-VHOg"><span class="selected-value select-value-color-blue">B2</span></td><td class="cell-]&lt;_A"><div class="checkbox checkbox-on"></div></td><td class="cell-pp@["></td></tr><tr id="aae45df5-ade7-4c55-8108-6b8e2e97e330"><td class="cell-title"><a href="https://www.notion.so/Before-sunrise-aae45df5ade74c5581086b8e2e97e330">Before sunrise</a></td><td class="cell-VHOg"><span class="selected-value select-value-color-green">B1</span><span class="selected-value select-value-color-blue">B2</span></td><td class="cell-]&lt;_A"><div class="checkbox checkbox-on"></div></td><td class="cell-pp@["><span class="selected-value select-value-color-green">Nope</span></td></tr><tr id="5f495db0-607f-468f-bad8-109050ebc3c3"><td class="cell-title"><a href="https://www.notion.so/Before-sunset-5f495db0607f468fbad8109050ebc3c3">Before sunset</a></td><td class="cell-VHOg"><span class="selected-value select-value-color-green">B1</span><span class="selected-value select-value-color-blue">B2</span></td><td class="cell-]&lt;_A"><div class="checkbox checkbox-on"></div></td><td class="cell-pp@["><span class="selected-value select-value-color-green">Nope</span></td></tr><tr id="cd79f76d-8e28-47f4-bc5d-274b3342f502"><td class="cell-title"><a href="https://www.notion.so/Braveheart-cd79f76d8e2847f4bc5d274b3342f502">Braveheart</a></td><td class="cell-VHOg"><span class="selected-value select-value-color-blue">B2</span></td><td class="cell-]&lt;_A"><div class="checkbox checkbox-on"></div></td><td class="cell-pp@["></td></tr><tr id="d87722e1-37df-4200-8f91-56e3e54697c5"><td class="cell-title"><a href="https://www.notion.so/Bridget-Jones-diary-d87722e137df42008f9156e3e54697c5">Bridget Jones diary</a></td><td class="cell-VHOg"><span class="selected-value select-value-color-green">B1</span><span class="selected-value select-value-color-blue">B2</span></td><td class="cell-]&lt;_A"><div class="checkbox checkbox-on"></div></td><td class="cell-pp@["><span class="selected-value select-value-color-orange">Rus lan</span></td></tr><tr id="1a262134-515e-4893-993e-d0edacda56f6"><td class="cell-title"><a href="https://www.notion.so/Cast-away-1a262134515e4893993ed0edacda56f6">Cast away
+</a></td><td class="cell-VHOg"><span class="selected-value select-value-color-orange">A2/A2+</span></td><td class="cell-]&lt;_A"><div class="checkbox checkbox-on"></div></td><td class="cell-pp@["><span class="selected-value select-value-color-yellow">Paid</span><span class="selected-value select-value-color-purple">Rus sub</span></td></tr><tr id="c6ccaf24-4625-4e13-84a9-f8ab11f25d2d"><td class="cell-title"><a href="https://www.notion.so/Catch-me-if-you-can-c6ccaf2446254e1384a9f8ab11f25d2d">Catch me if you can</a></td><td class="cell-VHOg"><span class="selected-value select-value-color-green">B1</span><span class="selected-value select-value-color-blue">B2</span></td><td class="cell-]&lt;_A"><div class="checkbox checkbox-on"></div></td><td class="cell-pp@["><span class="selected-value select-value-color-purple">Rus sub</span></td></tr><tr id="d85aceb1-7e9d-405f-b3df-69d31a0df43e"><td class="cell-title"><a href="https://www.notion.so/Clueless-d85aceb17e9d405fb3df69d31a0df43e">Clueless</a></td><td class="cell-VHOg"><span class="selected-value select-value-color-green">B1</span></td><td class="cell-]&lt;_A"><div class="checkbox checkbox-on"></div></td><td class="cell-pp@["><span class="selected-value select-value-color-green">Nope</span></td></tr><tr id="8926109a-b260-4423-9de9-914bd148f8d2"><td class="cell-title"><a href="https://www.notion.so/Deadpool-8926109ab26044239de9914bd148f8d2">Deadpool</a></td><td class="cell-VHOg"><span class="selected-value select-value-color-blue">B2</span></td><td class="cell-]&lt;_A"><div class="checkbox checkbox-on"></div></td><td class="cell-pp@["><span class="selected-value select-value-color-default">Everything</span></td></tr><tr id="fbe97825-dec4-4da4-a6b0-d92403fa1ae4"><td class="cell-title"><a href="https://www.notion.so/Die-Hard-fbe97825dec44da4a6b0d92403fa1ae4">Die Hard</a></td><td class="cell-VHOg"><span class="selected-value select-value-color-green">B1</span></td><td class="cell-]&lt;_A"><div class="checkbox checkbox-on"></div></td><td class="cell-pp@["><span class="selected-value select-value-color-purple">Rus sub</span></td></tr><tr id="15c578f6-aded-42e9-9f43-956c39b73ce0"><td class="cell-title"><a href="https://www.notion.so/Dredd-15c578f6aded42e99f43956c39b73ce0">Dredd
+</a></td><td class="cell-VHOg"><span class="selected-value select-value-color-orange">A2/A2+</span></td><td class="cell-]&lt;_A"><div class="checkbox checkbox-on"></div></td><td class="cell-pp@["><span class="selected-value select-value-color-orange">Rus lan</span></td></tr><tr id="ef2ddfce-33b4-4336-9182-184d29d25fff"><td class="cell-title"><a href="https://www.notion.so/Dune-ef2ddfce33b443369182184d29d25fff">Dune</a></td><td class="cell-VHOg"><span class="selected-value select-value-color-blue">B2</span></td><td class="cell-]&lt;_A"><div class="checkbox checkbox-on"></div></td><td class="cell-pp@["><span class="selected-value select-value-color-default">Everything</span></td></tr><tr id="8059d177-e518-49e1-b755-7f84fa8b3a49"><td class="cell-title"><a href="https://www.notion.so/Eurovision-Song-Contest-The-Story-of-Fire-Saga-8059d177e51849e1b7557f84fa8b3a49">Eurovision Song Contest: The Story of Fire Saga</a></td><td class="cell-VHOg"><span class="selected-value select-value-color-orange">A2/A2+</span></td><td class="cell-]&lt;_A"><div class="checkbox checkbox-on"></div></td><td class="cell-pp@["></td></tr><tr id="bf3ea372-a65c-4706-947e-d59dc90e8868"><td class="cell-title"><a href="https://www.notion.so/Fight-club-bf3ea372a65c4706947ed59dc90e8868">Fight club</a></td><td class="cell-VHOg"><span class="selected-value select-value-color-blue">B2</span></td><td class="cell-]&lt;_A"><div class="checkbox checkbox-on"></div></td><td class="cell-pp@["><span class="selected-value select-value-color-yellow">Paid</span></td></tr><tr id="3201dce0-7feb-4910-980d-c5f1b0a0949a"><td class="cell-title"><a href="https://www.notion.so/Finding-Nemo-3201dce07feb4910980dc5f1b0a0949a">Finding Nemo
+</a></td><td class="cell-VHOg"><span class="selected-value select-value-color-orange">A2/A2+</span></td><td class="cell-]&lt;_A"><div class="checkbox checkbox-on"></div></td><td class="cell-pp@["><span class="selected-value select-value-color-default">Everything</span></td></tr><tr id="3ad1992e-758c-4498-8616-e2ddaa6a230c"><td class="cell-title"><a href="https://www.notion.so/Forrest-Gump-3ad1992e758c44988616e2ddaa6a230c">Forrest Gump</a></td><td class="cell-VHOg"><span class="selected-value select-value-color-orange">A2/A2+</span><span class="selected-value select-value-color-green">B1</span></td><td class="cell-]&lt;_A"><div class="checkbox checkbox-on"></div></td><td class="cell-pp@["><span class="selected-value select-value-color-purple">Rus sub</span></td></tr><tr id="c671e165-0856-4005-935e-6822d36b09e1"><td class="cell-title"><a href="https://www.notion.so/Good-Will-Hunting-c671e16508564005935e6822d36b09e1">Good Will Hunting</a></td><td class="cell-VHOg"><span class="selected-value select-value-color-blue">B2</span></td><td class="cell-]&lt;_A"><div class="checkbox checkbox-on"></div></td><td class="cell-pp@["><span class="selected-value select-value-color-yellow">Paid</span></td></tr><tr id="c999bf78-bf5c-476e-be74-504988105dcd"><td class="cell-title"><a href="https://www.notion.so/Groundhog-day-c999bf78bf5c476ebe74504988105dcd">Groundhog day</a></td><td class="cell-VHOg"><span class="selected-value select-value-color-green">B1</span></td><td class="cell-]&lt;_A"><div class="checkbox checkbox-on"></div></td><td class="cell-pp@["><span class="selected-value select-value-color-default">Everything</span></td></tr><tr id="ba7dfbf3-fecc-4ac4-9b2a-5ee66d6684e5"><td class="cell-title"><a href="https://www.notion.so/Harry-Potter-1-ba7dfbf3fecc4ac49b2a5ee66d6684e5">Harry Potter (1)</a></td><td class="cell-VHOg"><span class="selected-value select-value-color-green">B1</span></td><td class="cell-]&lt;_A"><div class="checkbox checkbox-on"></div></td><td class="cell-pp@["><span class="selected-value select-value-color-purple">Rus sub</span></td></tr><tr id="d58b21ec-2d95-452a-b094-afd8cef7ec8e"><td class="cell-title"><a href="https://www.notion.so/Her-d58b21ec2d95452ab094afd8cef7ec8e">Her</a></td><td class="cell-VHOg"><span class="selected-value select-value-color-orange">A2/A2+</span><span class="selected-value select-value-color-green">B1</span></td><td class="cell-]&lt;_A"><div class="checkbox checkbox-on"></div></td><td class="cell-pp@["><span class="selected-value select-value-color-orange">Rus lan</span></td></tr><tr id="d925e1b9-2a99-4dc7-95ce-f86c43226b4a"><td class="cell-title"><a href="https://www.notion.so/Home-alone-d925e1b92a994dc795cef86c43226b4a">Home alone</a></td><td class="cell-VHOg"><span class="selected-value select-value-color-green">B1</span></td><td class="cell-]&lt;_A"><div class="checkbox checkbox-on"></div></td><td class="cell-pp@["><span class="selected-value select-value-color-default">Everything</span></td></tr><tr id="64a7ec43-0db5-496c-b1fa-e464699488be"><td class="cell-title"><a href="https://www.notion.so/Hook-64a7ec430db5496cb1fae464699488be">Hook</a></td><td class="cell-VHOg"><span class="selected-value select-value-color-orange">A2/A2+</span></td><td class="cell-]&lt;_A"><div class="checkbox checkbox-on"></div></td><td class="cell-pp@["><span class="selected-value select-value-color-green">Nope</span></td></tr><tr id="686fbbdb-06a8-4c79-903e-ad7e7b0c049b"><td class="cell-title"><a href="https://www.notion.so/House-of-Gucci-686fbbdb06a84c79903ead7e7b0c049b">House of Gucci</a></td><td class="cell-VHOg"><span class="selected-value select-value-color-blue">B2</span></td><td class="cell-]&lt;_A"><div class="checkbox checkbox-on"></div></td><td class="cell-pp@["></td></tr><tr id="d30261fc-30c6-4209-8a9d-d7290f9d035e"><td class="cell-title"><a href="https://www.notion.so/Inside-out-d30261fc30c642098a9dd7290f9d035e">Inside out</a></td><td class="cell-VHOg"><span class="selected-value select-value-color-green">B1</span></td><td class="cell-]&lt;_A"><div class="checkbox checkbox-on"></div></td><td class="cell-pp@["><span class="selected-value select-value-color-default">Everything</span></td></tr><tr id="ec849364-8b9b-4fb9-8bb0-016a14f9ba82"><td class="cell-title"><a href="https://www.notion.so/It-s-a-wonderful-life-ec8493648b9b4fb98bb0016a14f9ba82">It’s a wonderful life</a></td><td class="cell-VHOg"><span class="selected-value select-value-color-orange">A2/A2+</span></td><td class="cell-]&lt;_A"><div class="checkbox checkbox-on"></div></td><td class="cell-pp@["></td></tr><tr id="1c40d3c8-1fe4-42ef-aded-cc0765aab22a"><td class="cell-title"><a href="https://www.notion.so/Knives-out-1c40d3c81fe442efadedcc0765aab22a">Knives out</a></td><td class="cell-VHOg"><span class="selected-value select-value-color-blue">B2</span></td><td class="cell-]&lt;_A"><div class="checkbox checkbox-on"></div></td><td class="cell-pp@["><span class="selected-value select-value-color-orange">Rus lan</span></td></tr><tr id="52fb35d3-c542-4d78-9383-e1116d6ad5c7"><td class="cell-title"><a href="https://www.notion.so/Kubo-and-the-two-strings-52fb35d3c5424d789383e1116d6ad5c7">Kubo and the two strings</a></td><td class="cell-VHOg"><span class="selected-value select-value-color-orange">A2/A2+</span></td><td class="cell-]&lt;_A"><div class="checkbox checkbox-on"></div></td><td class="cell-pp@["><span class="selected-value select-value-color-green">Nope</span></td></tr><tr id="b64d3f0d-0cba-4791-9b48-9f4af90869af"><td class="cell-title"><a href="https://www.notion.so/Liar-liar-b64d3f0d0cba47919b489f4af90869af">Liar, liar</a></td><td class="cell-VHOg"><span class="selected-value select-value-color-green">B1</span></td><td class="cell-]&lt;_A"><div class="checkbox checkbox-on"></div></td><td class="cell-pp@["><span class="selected-value select-value-color-orange">Rus lan</span></td></tr><tr id="bdf1e275-257a-47dc-a32b-f4a1057a16f2"><td class="cell-title"><a href="https://www.notion.so/Lie-to-me-series-bdf1e275257a47dca32bf4a1057a16f2">Lie to me (series)</a></td><td class="cell-VHOg"><span class="selected-value select-value-color-green">B1</span><span class="selected-value select-value-color-blue">B2</span></td><td class="cell-]&lt;_A"><div class="checkbox checkbox-off"></div></td><td class="cell-pp@["></td></tr><tr id="450b98df-e330-4b12-924d-b0c8211f4286"><td class="cell-title"><a href="https://www.notion.so/Lion-450b98dfe3304b12924db0c8211f4286">Lion</a></td><td class="cell-VHOg"><span class="selected-value select-value-color-green">B1</span><span class="selected-value select-value-color-blue">B2</span></td><td class="cell-]&lt;_A"><div class="checkbox checkbox-on"></div></td><td class="cell-pp@["></td></tr><tr id="6d7de1c5-afda-47b1-8e01-76789c53ec7e"><td class="cell-title"><a href="https://www.notion.so/Logan-6d7de1c5afda47b18e0176789c53ec7e">Logan</a></td><td class="cell-VHOg"><span class="selected-value select-value-color-green">B1</span></td><td class="cell-]&lt;_A"><div class="checkbox checkbox-on"></div></td><td class="cell-pp@["></td></tr><tr id="94c68797-5f47-4193-b922-ce2a2034cdc4"><td class="cell-title"><a href="https://www.notion.so/Love-actually-94c687975f474193b922ce2a2034cdc4">Love actually </a></td><td class="cell-VHOg"><span class="selected-value select-value-color-green">B1</span></td><td class="cell-]&lt;_A"><div class="checkbox checkbox-on"></div></td><td class="cell-pp@["><span class="selected-value select-value-color-purple">Rus sub</span></td></tr><tr id="502a88d8-80b7-4b6e-8d63-308555f7a2d1"><td class="cell-title"><a href="https://www.notion.so/Mamma-Mia-502a88d880b74b6e8d63308555f7a2d1">Mamma Mia</a></td><td class="cell-VHOg"><span class="selected-value select-value-color-green">B1</span></td><td class="cell-]&lt;_A"><div class="checkbox checkbox-on"></div></td><td class="cell-pp@["><span class="selected-value select-value-color-yellow">Paid</span><span class="selected-value select-value-color-orange">Rus lan</span></td></tr><tr id="c8964737-d8fc-4f92-a340-89b4f73059f2"><td class="cell-title"><a href="https://www.notion.so/Mary-Poppins-Returns-c8964737d8fc4f92a34089b4f73059f2">Mary Poppins Returns</a></td><td class="cell-VHOg"><span class="selected-value select-value-color-green">B1</span></td><td class="cell-]&lt;_A"><div class="checkbox checkbox-on"></div></td><td class="cell-pp@["></td></tr><tr id="282f3970-da14-4321-9ca6-66b242db7f82"><td class="cell-title"><a href="https://www.notion.so/Matilda-282f3970da1443219ca666b242db7f82">Matilda </a></td><td class="cell-VHOg"><span class="selected-value select-value-color-green">B1</span></td><td class="cell-]&lt;_A"><div class="checkbox checkbox-on"></div></td><td class="cell-pp@["><span class="selected-value select-value-color-orange">Rus lan</span></td></tr><tr id="266f7e48-0a3b-4f1a-bec3-824c73034391"><td class="cell-title"><a href="https://www.notion.so/Meet-the-parents-266f7e480a3b4f1abec3824c73034391">Meet the parents</a></td><td class="cell-VHOg"><span class="selected-value select-value-color-green">B1</span></td><td class="cell-]&lt;_A"><div class="checkbox checkbox-on"></div></td><td class="cell-pp@["><span class="selected-value select-value-color-purple">Rus sub</span></td></tr><tr id="8418a1ff-d6d7-47c6-84de-7df641cdb3c6"><td class="cell-title"><a href="https://www.notion.so/Moulin-Rouge-8418a1ffd6d747c684de7df641cdb3c6">Moulin Rouge 🎙️</a></td><td class="cell-VHOg"><span class="selected-value select-value-color-orange">A2/A2+</span><span class="selected-value select-value-color-green">B1</span></td><td class="cell-]&lt;_A"><div class="checkbox checkbox-off"></div></td><td class="cell-pp@["></td></tr><tr id="59f38f5c-33a9-4f89-869c-91ea5f41e27c"><td class="cell-title"><a href="https://www.notion.so/Mrs-Doubtfire-59f38f5c33a94f89869c91ea5f41e27c">Mrs. Doubtfire</a></td><td class="cell-VHOg"><span class="selected-value select-value-color-green">B1</span></td><td class="cell-]&lt;_A"><div class="checkbox checkbox-on"></div></td><td class="cell-pp@["><span class="selected-value select-value-color-default">Everything</span></td></tr><tr id="a7bf5698-de54-42e3-8f92-1190e85624e7"><td class="cell-title"><a href="https://www.notion.so/My-big-fat-Greek-wedding-a7bf5698de5442e38f921190e85624e7">My big fat Greek wedding</a></td><td class="cell-VHOg"><span class="selected-value select-value-color-orange">A2/A2+</span></td><td class="cell-]&lt;_A"><div class="checkbox checkbox-on"></div></td><td class="cell-pp@["><span class="selected-value select-value-color-green">Nope</span></td></tr><tr id="119a675f-4486-4741-91d0-402f7ec4b7e8"><td class="cell-title"><a href="https://www.notion.so/Notting-Hill-119a675f4486474191d0402f7ec4b7e8">Notting Hill</a></td><td class="cell-VHOg"><span class="selected-value select-value-color-green">B1</span></td><td class="cell-]&lt;_A"><div class="checkbox checkbox-on"></div></td><td class="cell-pp@["><span class="selected-value select-value-color-orange">Rus lan</span></td></tr><tr id="2f9ee9db-6ad5-414b-b828-1ffa14d3cd66"><td class="cell-title"><a href="https://www.notion.so/Pirates-of-the-Caribbean-1-2f9ee9db6ad5414bb8281ffa14d3cd66">Pirates of the Caribbean (1) </a></td><td class="cell-VHOg"><span class="selected-value select-value-color-green">B1</span></td><td class="cell-]&lt;_A"><div class="checkbox checkbox-on"></div></td><td class="cell-pp@["><span class="selected-value select-value-color-default">Everything</span></td></tr><tr id="c19c4e6d-bcd3-410c-8eae-3ceec8953cc9"><td class="cell-title"><a href="https://www.notion.so/Pleasantville-c19c4e6dbcd3410c8eae3ceec8953cc9">Pleasantville</a></td><td class="cell-VHOg"><span class="selected-value select-value-color-green">B1</span></td><td class="cell-]&lt;_A"><div class="checkbox checkbox-on"></div></td><td class="cell-pp@["><span class="selected-value select-value-color-green">Nope</span></td></tr><tr id="42941f21-84fd-4c06-a37c-b2ec0b6fb2da"><td class="cell-title"><a href="https://www.notion.so/Powder-42941f2184fd4c06a37cb2ec0b6fb2da">Powder</a></td><td class="cell-VHOg"><span class="selected-value select-value-color-green">B1</span></td><td class="cell-]&lt;_A"><div class="checkbox checkbox-on"></div></td><td class="cell-pp@["><span class="selected-value select-value-color-gray">No subs</span><span class="selected-value select-value-color-yellow">Paid</span></td></tr><tr id="e9c7d69f-4a4b-4a07-b790-51f2429f8ca7"><td class="cell-title"><a href="https://www.notion.so/Pulp-Fiction-e9c7d69f4a4b4a07b79051f2429f8ca7">Pulp Fiction</a></td><td class="cell-VHOg"><span class="selected-value select-value-color-blue">B2</span></td><td class="cell-]&lt;_A"><div class="checkbox checkbox-on"></div></td><td class="cell-pp@["></td></tr><tr id="7547f3ae-8245-40bd-85fc-c2b061fc27b8"><td class="cell-title"><a href="https://www.notion.so/Ready-or-not-7547f3ae824540bd85fcc2b061fc27b8">Ready or not
+</a></td><td class="cell-VHOg"><span class="selected-value select-value-color-orange">A2/A2+</span></td><td class="cell-]&lt;_A"><div class="checkbox checkbox-on"></div></td><td class="cell-pp@["><span class="selected-value select-value-color-purple">Rus sub</span></td></tr><tr id="c2585f8f-9bed-4037-aca2-c3e6086ebc4e"><td class="cell-title"><a href="https://www.notion.so/Shrek-c2585f8f9bed4037aca2c3e6086ebc4e">Shrek</a></td><td class="cell-VHOg"><span class="selected-value select-value-color-green">B1</span></td><td class="cell-]&lt;_A"><div class="checkbox checkbox-on"></div></td><td class="cell-pp@["><span class="selected-value select-value-color-purple">Rus sub</span></td></tr><tr id="98dc3305-1938-444e-ad6e-24f6fee2121d"><td class="cell-title"><a href="https://www.notion.so/Sleepless-in-Seattle-98dc33051938444ead6e24f6fee2121d">Sleepless in Seattle </a></td><td class="cell-VHOg"><span class="selected-value select-value-color-orange">A2/A2+</span></td><td class="cell-]&lt;_A"><div class="checkbox checkbox-on"></div></td><td class="cell-pp@["><span class="selected-value select-value-color-orange">Rus lan</span></td></tr><tr id="468a18fc-7dcf-4978-9e81-b42fb67cf74b"><td class="cell-title"><a href="https://www.notion.so/Soul-468a18fc7dcf49789e81b42fb67cf74b">Soul</a></td><td class="cell-VHOg"><span class="selected-value select-value-color-green">B1</span></td><td class="cell-]&lt;_A"><div class="checkbox checkbox-on"></div></td><td class="cell-pp@["><span class="selected-value select-value-color-default">Everything</span></td></tr><tr id="bff34ed0-c218-431c-8aa9-47ba60c00586"><td class="cell-title"><a href="https://www.notion.so/The-blind-side-bff34ed0c218431c8aa947ba60c00586">The blind side </a></td><td class="cell-VHOg"><span class="selected-value select-value-color-green">B1</span></td><td class="cell-]&lt;_A"><div class="checkbox checkbox-on"></div></td><td class="cell-pp@["><span class="selected-value select-value-color-green">Nope</span></td></tr><tr id="6a045bee-2f61-48bb-9d16-7eaa8139ead7"><td class="cell-title"><a href="https://www.notion.so/The-break-up-6a045bee2f6148bb9d167eaa8139ead7">The break-up</a></td><td class="cell-VHOg"><span class="selected-value select-value-color-orange">A2/A2+</span></td><td class="cell-]&lt;_A"><div class="checkbox checkbox-on"></div></td><td class="cell-pp@["><span class="selected-value select-value-color-purple">Rus sub</span></td></tr><tr id="e1e6e3ec-f56a-4a71-a3fa-17f6e7cca061"><td class="cell-title"><a href="https://www.notion.so/The-cabin-in-the-woods-e1e6e3ecf56a4a71a3fa17f6e7cca061">The cabin in the woods
+</a></td><td class="cell-VHOg"><span class="selected-value select-value-color-orange">A2/A2+</span></td><td class="cell-]&lt;_A"><div class="checkbox checkbox-on"></div></td><td class="cell-pp@["><span class="selected-value select-value-color-gray">No subs</span><span class="selected-value select-value-color-yellow">Paid</span></td></tr><tr id="d4611b8f-b566-4497-865d-c2f184135881"><td class="cell-title"><a href="https://www.notion.so/The-fault-in-our-stars-d4611b8fb5664497865dc2f184135881">The fault in our stars 😭</a></td><td class="cell-VHOg"><span class="selected-value select-value-color-orange">A2/A2+</span><span class="selected-value select-value-color-green">B1</span></td><td class="cell-]&lt;_A"><div class="checkbox checkbox-on"></div></td><td class="cell-pp@["></td></tr><tr id="d86eaf29-40a9-4ff1-b8eb-5e0f00ec924c"><td class="cell-title"><a href="https://www.notion.so/The-graduate-d86eaf2940a94ff1b8eb5e0f00ec924c">The graduate</a></td><td class="cell-VHOg"><span class="selected-value select-value-color-green">B1</span><span class="selected-value select-value-color-blue">B2</span></td><td class="cell-]&lt;_A"><div class="checkbox checkbox-on"></div></td><td class="cell-pp@["><span class="selected-value select-value-color-green">Nope</span></td></tr><tr id="35725be7-7473-4e5f-a998-e63e19c1e28b"><td class="cell-title"><a href="https://www.notion.so/The-Greatest-Showman-35725be774734e5fa998e63e19c1e28b">The Greatest Showman 🎙️</a></td><td class="cell-VHOg"><span class="selected-value select-value-color-orange">A2/A2+</span></td><td class="cell-]&lt;_A"><div class="checkbox checkbox-on"></div></td><td class="cell-pp@["></td></tr><tr id="9aa0c625-76a5-4af7-9d2c-1d5500ead5b3"><td class="cell-title"><a href="https://www.notion.so/The-hangover-9aa0c62576a54af79d2c1d5500ead5b3">The hangover</a></td><td class="cell-VHOg"><span class="selected-value select-value-color-blue">B2</span></td><td class="cell-]&lt;_A"><div class="checkbox checkbox-on"></div></td><td class="cell-pp@["></td></tr><tr id="b01a6a25-1d6e-4230-8123-ea7a2d5ac79c"><td class="cell-title"><a href="https://www.notion.so/The-holiday-b01a6a251d6e42308123ea7a2d5ac79c">The holiday</a></td><td class="cell-VHOg"><span class="selected-value select-value-color-green">B1</span></td><td class="cell-]&lt;_A"><div class="checkbox checkbox-on"></div></td><td class="cell-pp@["><span class="selected-value select-value-color-gray">No subs</span></td></tr><tr id="df0b81c3-a7fb-497d-a56d-557bd1fa5ba0"><td class="cell-title"><a href="https://www.notion.so/The-invisible-man-2020-df0b81c3a7fb497da56d557bd1fa5ba0">The invisible man (2020)
+</a></td><td class="cell-VHOg"><span class="selected-value select-value-color-orange">A2/A2+</span></td><td class="cell-]&lt;_A"><div class="checkbox checkbox-on"></div></td><td class="cell-pp@["><span class="selected-value select-value-color-yellow">Paid</span><span class="selected-value select-value-color-orange">Rus lan</span></td></tr><tr id="ff08cd95-8b7d-4ab6-aa1c-2687116e0144"><td class="cell-title"><a href="https://www.notion.so/The-jungle-book-ff08cd958b7d4ab6aa1c2687116e0144">The jungle book
+</a></td><td class="cell-VHOg"><span class="selected-value select-value-color-orange">A2/A2+</span></td><td class="cell-]&lt;_A"><div class="checkbox checkbox-on"></div></td><td class="cell-pp@["><span class="selected-value select-value-color-default">Everything</span></td></tr><tr id="8bad07fc-6456-4e47-9bd6-0c40ddfde6b4"><td class="cell-title"><a href="https://www.notion.so/The-king-s-speech-8bad07fc64564e479bd60c40ddfde6b4">The king’s speech</a></td><td class="cell-VHOg"><span class="selected-value select-value-color-blue">B2</span></td><td class="cell-]&lt;_A"><div class="checkbox checkbox-on"></div></td><td class="cell-pp@["></td></tr><tr id="4008ffaa-5c7c-40f4-b101-5243cbfcb55d"><td class="cell-title"><a href="https://www.notion.so/The-lion-king-4008ffaa5c7c40f4b1015243cbfcb55d">The lion king</a></td><td class="cell-VHOg"><span class="selected-value select-value-color-orange">A2/A2+</span></td><td class="cell-]&lt;_A"><div class="checkbox checkbox-on"></div></td><td class="cell-pp@["><span class="selected-value select-value-color-default">Everything</span></td></tr><tr id="b6f77e73-1d01-4974-979a-d52a57905efa"><td class="cell-title"><a href="https://www.notion.so/The-lord-of-the-rings-b6f77e731d014974979ad52a57905efa">The lord of the rings</a></td><td class="cell-VHOg"><span class="selected-value select-value-color-green">B1</span><span class="selected-value select-value-color-blue">B2</span></td><td class="cell-]&lt;_A"><div class="checkbox checkbox-on"></div></td><td class="cell-pp@["><span class="selected-value select-value-color-green">Nope</span></td></tr><tr id="35cd1d23-b2ed-4cad-9189-89e5fb95c436"><td class="cell-title"><a href="https://www.notion.so/The-man-called-Flinstone-35cd1d23b2ed4cad918989e5fb95c436">The man called Flinstone</a></td><td class="cell-VHOg"><span class="selected-value select-value-color-orange">A2/A2+</span></td><td class="cell-]&lt;_A"><div class="checkbox checkbox-on"></div></td><td class="cell-pp@["><span class="selected-value select-value-color-green">Nope</span></td></tr><tr id="028ed910-e5e3-46ff-b5bd-9200f84eeaaf"><td class="cell-title"><a href="https://www.notion.so/The-secret-life-of-Walter-Mitty-028ed910e5e346ffb5bd9200f84eeaaf">The secret life of Walter Mitty</a></td><td class="cell-VHOg"><span class="selected-value select-value-color-green">B1</span></td><td class="cell-]&lt;_A"><div class="checkbox checkbox-on"></div></td><td class="cell-pp@["><span class="selected-value select-value-color-default">Everything</span></td></tr><tr id="a04a9b95-44c5-41d5-9da5-7ebbc975c8ba"><td class="cell-title"><a href="https://www.notion.so/The-Shawshank-Redemption-a04a9b9544c541d59da57ebbc975c8ba">The Shawshank Redemption</a></td><td class="cell-VHOg"><span class="selected-value select-value-color-green">B1</span><span class="selected-value select-value-color-blue">B2</span></td><td class="cell-]&lt;_A"><div class="checkbox checkbox-on"></div></td><td class="cell-pp@["></td></tr><tr id="c3c22573-fbfe-44cb-a4f3-ee19f95a9b49"><td class="cell-title"><a href="https://www.notion.so/The-social-network-c3c22573fbfe44cba4f3ee19f95a9b49">The social network</a></td><td class="cell-VHOg"><span class="selected-value select-value-color-blue">B2</span></td><td class="cell-]&lt;_A"><div class="checkbox checkbox-on"></div></td><td class="cell-pp@["><span class="selected-value select-value-color-yellow">Paid</span></td></tr><tr id="95230c60-cc58-4d6b-ade2-c83623e61049"><td class="cell-title"><a href="https://www.notion.so/The-terminal-95230c60cc584d6bade2c83623e61049">The terminal
+</a></td><td class="cell-VHOg"><span class="selected-value select-value-color-orange">A2/A2+</span><span class="selected-value select-value-color-green">B1</span></td><td class="cell-]&lt;_A"><div class="checkbox checkbox-on"></div></td><td class="cell-pp@["><span class="selected-value select-value-color-purple">Rus sub</span></td></tr><tr id="c352558b-7fb3-47c2-bce0-e68906c09f13"><td class="cell-title"><a href="https://www.notion.so/The-terminator-c352558b7fb347c2bce0e68906c09f13">The terminator</a></td><td class="cell-VHOg"><span class="selected-value select-value-color-green">B1</span></td><td class="cell-]&lt;_A"><div class="checkbox checkbox-on"></div></td><td class="cell-pp@["><span class="selected-value select-value-color-green">Nope</span></td></tr><tr id="55638323-1b86-4aee-b182-ffe409dac7c6"><td class="cell-title"><a href="https://www.notion.so/The-theory-of-everything-556383231b864aeeb182ffe409dac7c6">The theory of everything</a></td><td class="cell-VHOg"><span class="selected-value select-value-color-blue">B2</span></td><td class="cell-]&lt;_A"><div class="checkbox checkbox-on"></div></td><td class="cell-pp@["><span class="selected-value select-value-color-purple">Rus sub</span></td></tr><tr id="c58f0c02-ad7e-484e-9afe-afbde01ca15e"><td class="cell-title"><a href="https://www.notion.so/The-usual-suspects-c58f0c02ad7e484e9afeafbde01ca15e">The usual suspects</a></td><td class="cell-VHOg"><span class="selected-value select-value-color-blue">B2</span></td><td class="cell-]&lt;_A"><div class="checkbox checkbox-on"></div></td><td class="cell-pp@["><span class="selected-value select-value-color-yellow">Paid</span></td></tr><tr id="a3ee6b02-7582-4d30-b335-0faa3de9e2e5"><td class="cell-title"><a href="https://www.notion.so/The-Walking-Dead-series-a3ee6b0275824d30b3350faa3de9e2e5">The Walking Dead  (series)🧟</a></td><td class="cell-VHOg"><span class="selected-value select-value-color-orange">A2/A2+</span></td><td class="cell-]&lt;_A"><div class="checkbox checkbox-off"></div></td><td class="cell-pp@["></td></tr><tr id="cf816a6e-3a66-4a85-a9ec-bc7be41705de"><td class="cell-title"><a href="https://www.notion.so/Titanic-cf816a6e3a664a85a9ecbc7be41705de">Titanic</a></td><td class="cell-VHOg"><span class="selected-value select-value-color-blue">B2</span></td><td class="cell-]&lt;_A"><div class="checkbox checkbox-on"></div></td><td class="cell-pp@["><span class="selected-value select-value-color-default">Everything</span></td></tr><tr id="0f8b49db-2b73-4bbe-be2f-852968677d19"><td class="cell-title"><a href="https://www.notion.so/Toy-story-0f8b49db2b734bbebe2f852968677d19">Toy story</a></td><td class="cell-VHOg"><span class="selected-value select-value-color-orange">A2/A2+</span></td><td class="cell-]&lt;_A"><div class="checkbox checkbox-on"></div></td><td class="cell-pp@["><span class="selected-value select-value-color-default">Everything</span></td></tr><tr id="fed7b9b2-9d94-40f8-8bd9-847c11636172"><td class="cell-title"><a href="https://www.notion.so/Twilight-fed7b9b29d9440f88bd9847c11636172">Twilight
+</a></td><td class="cell-VHOg"><span class="selected-value select-value-color-orange">A2/A2+</span></td><td class="cell-]&lt;_A"><div class="checkbox checkbox-on"></div></td><td class="cell-pp@["><span class="selected-value select-value-color-gray">No subs</span><span class="selected-value select-value-color-yellow">Paid</span></td></tr><tr id="f34ac2df-bb02-496e-8ca5-6ebb7c5336aa"><td class="cell-title"><a href="https://www.notion.so/Up-f34ac2dfbb02496e8ca56ebb7c5336aa">Up</a></td><td class="cell-VHOg"><span class="selected-value select-value-color-orange">A2/A2+</span></td><td class="cell-]&lt;_A"><div class="checkbox checkbox-on"></div></td><td class="cell-pp@["><span class="selected-value select-value-color-default">Everything</span></td></tr><tr id="8c9925fc-1a4a-41f6-a72a-2a33da13a8ea"><td class="cell-title"><a href="https://www.notion.so/Venom-8c9925fc1a4a41f6a72a2a33da13a8ea">Venom</a></td><td class="cell-VHOg"><span class="selected-value select-value-color-blue">B2</span></td><td class="cell-]&lt;_A"><div class="checkbox checkbox-on"></div></td><td class="cell-pp@["><span class="selected-value select-value-color-default">Everything</span></td></tr><tr id="32052a73-5f0c-47f2-bb1b-b2f4715c5fa8"><td class="cell-title"><a href="https://www.notion.so/Warm-bodies-32052a735f0c47f2bb1bb2f4715c5fa8">Warm bodies</a></td><td class="cell-VHOg"><span class="selected-value select-value-color-green">B1</span></td><td class="cell-]&lt;_A"><div class="checkbox checkbox-on"></div></td><td class="cell-pp@["><span class="selected-value select-value-color-default">Everything</span><span class="selected-value select-value-color-yellow">Paid</span></td></tr><tr id="1111d09a-1adc-46ca-9c9b-6d0dc0ccebbe"><td class="cell-title"><a href="https://www.notion.so/We-re-the-Millers-1111d09a1adc46ca9c9b6d0dc0ccebbe">We’re the Millers</a></td><td class="cell-VHOg"><span class="selected-value select-value-color-green">B1</span></td><td class="cell-]&lt;_A"><div class="checkbox checkbox-on"></div></td><td class="cell-pp@["><span class="selected-value select-value-color-green">Nope</span></td></tr></tbody></table></div></article></body></html>
